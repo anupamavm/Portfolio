@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
+}
+
+/* NavBar */
+.navbar {
+	/* background-color: #ff5c00; */
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 70px;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	gap: 20%;
+	border: 1px red solid;
+	padding: 0 10%;
+}
+
+.anupama-v-mora {
+	color: #000000;
+	text-align: left;
+	font-size: 25px;
+	font-weight: 400;
+}
+.about {
+	color: #000000;
+	text-align: right;
+	font-size: 25px;
+	font-weight: 400;
+}
+.blog {
+	color: #000000;
+	text-align: right;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.blog:hover,
+.about:hover {
+	color: #ff5c00;
+}
+
+/* Hero Section */
+.heroSection {
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	padding: 0;
+}
+
+.profilePhoto {
+	/* border: red 1px solid; */
+	background-color: #000000;
+	width: 175px;
+	height: 175px;
+	margin: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+.middleBar {
+	/* border: 1px red solid; */
+	display: none;
+	width: 4px;
+	margin: 10px;
+	height: 175px;
+	background-color: #000000;
+}
+
+.heroText {
+	/* display: flex; */
+	flex-direction: column;
+	justify-content: center;
+
+	/* border: 1px red solid; */
+}
+
+.nameText {
+	font-size: x-large;
+	/* border: 1px red solid; */
+	margin-bottom: 10px;
+}
+
+.roleText {
+	font-size: xx-large;
+	/* border: 1px red solid; */
+}
+
+.socialLinks {
+	/* border: 1px red solid; */
+	display: flex;
+	flex-direction: row;
+	gap: 10%;
+	margin-top: 20px;
+
+	/* justify-content: center; */
+}
+
+#linkedin:hover,
+#github:hover,
+#instagram:hover {
+	color: #ff5c00;
+}
+
+#linkedin,
+#github,
+#instagram {
+	color: #000000;
+	text-decoration: none;
+}
+
+.myProjects {
+	margin: 0 10%;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	border: 1px red solid;
+}
+
+@media (min-width: 600px) {
+	.heroSection {
+		flex-direction: row;
+		align-items: center;
+	}
+	.middleBar {
+		display: inline;
+	}
+	.myProjects {
+		margin: 0 20%;
+	}
+}
