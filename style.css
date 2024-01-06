@@ -57,8 +57,8 @@
 	background-color: #000000;
 	width: 175px;
 	height: 175px;
-	margin: 10px;
-	margin: 0;
+	margin-bottom: 10px;
+
 	padding: 0;
 }
 
@@ -136,5 +136,8 @@ iframe {
 	}
 	iframe {
 		width: 600px;
+	}
+	.profilePhoto {
+		margin-bottom: 0px;
 	}
 }
