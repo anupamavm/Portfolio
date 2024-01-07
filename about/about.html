@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>avmora</title>
+		<link rel="stylesheet" href="./about.css" />
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<span class="anupama-v-mora"
+				><a href="../index.html">Anupama V Mora</a></span
+			>
+			<label class="switch">
+				<input type="checkbox" id="darkModeCheckbox" class="checkbox-input" />
+				<span class="slider round"></span>
+			</label>
+		</nav>
+		<div class="navbar-menu">
+			<span class="about"> <a href="./about.html">About</a> </span>
+			<span class="blog"> <a href="../blog/blog.html">Blog</a> </span>
+		</div>
+
+		<h1>This is about</h1>
+		<h2>Under Construction</h2>
+		<footer>
+			<a target="_blank">anupamamorapitiya97@gmail.com</a>
+		</footer>
+
+		<script>
+			const darkModeCheckbox = document.getElementById('darkModeCheckbox');
+			const body = document.body;
+
+			darkModeCheckbox.addEventListener('change', () => {
+				body.classList.toggle('dark-mode');
+			});
+		</script>
+	</body>
+</html>

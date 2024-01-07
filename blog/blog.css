@@ -46,7 +46,6 @@ body {
 	text-align: left;
 	font-size: 25px;
 	font-weight: 400;
-	text-decoration: none;
 	/* border: 1px solid red; */
 }
 
@@ -148,92 +147,6 @@ input:checked + .slider:before {
 	padding: 0;
 }
 
-.profilePhoto {
-	/* background-color: #d12e2e; */
-	width: 175px;
-	height: 175px;
-	margin-bottom: 10px;
-
-	padding: 0;
-}
-
-.middleBar {
-	display: none;
-	width: 4px;
-	margin: 10px;
-	height: 175px;
-	background-color: #000000;
-}
-
-.heroText {
-	/* display: flex; */
-	flex-direction: column;
-	justify-content: center;
-}
-
-.nameText {
-	font-size: x-large;
-
-	margin-bottom: 10px;
-}
-
-.roleText {
-	font-size: xx-large;
-}
-
-.socialLinks {
-	display: flex;
-	flex-direction: row;
-	gap: 10%;
-	margin-top: 20px;
-}
-
-#linkedin:hover,
-#github:hover,
-#instagram:hover {
-	color: var(--hover-color);
-}
-
-#linkedin,
-#github,
-#instagram {
-	color: var(--text-color);
-	text-decoration: none;
-}
-
-.myProjects {
-	margin-top: 10%;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 100px;
-
-	/* align-items: center; */
-	/* border: 1px red solid; */
-	font-size: x-large;
-}
-
-.myProjectsHeading {
-	align-self: center;
-	font-size: x-large;
-	margin-bottom: 20px;
-	color: var(--text-color);
-}
-.project {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 0px 20px;
-	/* border: 1px red solid; */
-}
-
-iframe {
-	width: 90%;
-	height: 400px;
-	/* border: 1px red solid; */
-	margin: 5%;
-}
-
 footer {
 	text-align: center;
 	margin: 30px auto;
@@ -258,22 +171,5 @@ footer {
 	.blog,
 	.about {
 		margin: 0 10px;
-	}
-
-	.heroSection {
-		flex-direction: row;
-		align-items: center;
-	}
-	.middleBar {
-		display: inline;
-	}
-	.myProjects {
-		margin: 0 20%;
-	}
-	iframe {
-		width: 600px;
-	}
-	.profilePhoto {
-		margin-bottom: 0px;
 	}
 }
