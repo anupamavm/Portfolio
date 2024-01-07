@@ -7,6 +7,25 @@
 	font-family: 'Roboto Slab', serif;
 }
 
+:root {
+	--background-color: #ffffff;
+	--text-color: #000000;
+	--hover-color: #ff5c00;
+	--transition-duration: 0.3s; /* Define transition duration */
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	transition: background-color var(--transition-duration) ease,
+		color var(--transition-duration) ease; /* Apply transition */
+}
+
+.dark-mode {
+	--background-color: #121212;
+	--text-color: #ffffff;
+}
+
 /* NavBar */
 .navbar {
 	display: flex;
@@ -15,38 +34,113 @@
 	height: 70px;
 	align-items: center;
 	position: relative;
-	justify-content: center;
-	gap: 20%;
+	justify-content: space-between;
+	gap: 10%;
 	padding: 0 10%;
+
+	/* border: 1px solid red; */
 }
 
 .anupama-v-mora {
-	color: #000000;
+	color: var(--text-color);
 	text-align: left;
 	font-size: 25px;
 	font-weight: 400;
+	/* border: 1px solid red; */
 }
-.about {
-	color: #000000;
-	text-align: right;
-	font-size: 25px;
-	font-weight: 400;
+
+.navbar-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid rgb(8, 8, 8); */
+	margin: 0 10%;
 }
+
+.about,
 .blog {
-	color: #000000;
-	text-align: right;
-	font-size: 25px;
+	/* border: 1px solid red; */
+	color: var(--text-color);
+	font-size: 20px;
 	font-weight: 400;
+	cursor: pointer;
+	width: 100px;
 }
 
 .blog:hover,
 .about:hover {
-	color: #ff5c00;
+	color: var(--hover-color);
+}
+
+/* Mode toggle button */
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	/* border: 1px solid red; */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--text-color);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--background-color);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: var(--text-color);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #040405;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 20px;
 }
 
 /* Hero Section */
 .heroSection {
-	margin: 50px;
+	margin: 30px 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -54,7 +148,7 @@
 }
 
 .profilePhoto {
-	background-color: #000000;
+	/* background-color: #d12e2e; */
 	width: 175px;
 	height: 175px;
 	margin-bottom: 10px;
@@ -96,34 +190,66 @@
 #linkedin:hover,
 #github:hover,
 #instagram:hover {
-	color: #ff5c00;
+	color: var(--hover-colors);
 }
 
 #linkedin,
 #github,
 #instagram {
-	color: #000000;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
 .myProjects {
-	margin: 0 10%;
+	margin-top: 10%;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 100px;
 
-	align-items: center;
-	/* border: 1px red solid; */
+	/* align-items: center; */
+	border: 1px red solid;
 	font-size: x-large;
 }
 
+.myProjectsHeading {
+	align-self: center;
+	font-size: x-large;
+	margin-bottom: 20px;
+	color: var(--text-color);
+}
+.project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 20px;
+	border: 1px red solid;
+}
+
 iframe {
-	width: 80%;
+	width: 90%;
 	height: 400px;
-	border: 1px re d solid;
-	margin: 0 10%;
+	/* border: 1px red solid; */
+	margin: 5%;
 }
 
 @media (min-width: 600px) {
+	.navbar {
+		flex-direction: row;
+		gap: 10%;
+		padding: 0 20%;
+	}
+
+	.navbar-menu {
+		padding: 0 10%;
+		justify-content: center;
+	}
+
+	.blog,
+	.about {
+		margin: 0 10px;
+	}
+
 	.heroSection {
 		flex-direction: row;
 		align-items: center;
